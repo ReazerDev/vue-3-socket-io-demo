@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 3000",
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@types/node": "^14.14.9",
+    "@types/vue": "^2.0.0",
     "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "socket.io-client": "^3.0.3",
     "vue": "^3.0.0",
-    "vue-class-component": "^8.0.0-0"
+    "vue-class-component": "^8.0.0-0",
+    "vue-property-decorator": "^9.1.2",
+    "vue-socket.io-extended": "file:~/projects/vue/vue-socket.io-extended/"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="19.587"
+   height="14.987"
+   viewBox="0 0 19.587 14.987"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="very-cloudy.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2880"
+     inkscape:window-height="1526"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="67.258288"
+     inkscape:cx="9.7934999"
+     inkscape:cy="7.4935002"
+     inkscape:window-x="-11"
+     inkscape:window-y="843"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Group_1" />
+  <g
+     id="Group_1"
+     data-name="Group 1"
+     transform="translate(-387.556 -81.958)">
+    <path
+       id="cloud-solid"
+       d="M9.969,35.666a1.847,1.847,0,0,0,.119-.652,1.8,1.8,0,0,0-1.78-1.808,1.752,1.752,0,0,0-.988.305A2.957,2.957,0,0,0,4.747,32,2.99,2.99,0,0,0,1.78,35.014c0,.051,0,.1,0,.153a2.72,2.72,0,0,0,.886,5.273H9.494a2.415,2.415,0,0,0,.475-4.773Z"
+       transform="translate(387.556 49.958)"
+       style="fill:#ffffff;fill-opacity:1" />
+    <path
+       id="cloud-solid-2"
+       data-name="cloud-solid"
+       d="M15.114,37.558a2.8,2.8,0,0,0,.18-.988,2.721,2.721,0,0,0-2.7-2.742,2.656,2.656,0,0,0-1.5.463A4.483,4.483,0,0,0,7.2,32a4.533,4.533,0,0,0-4.5,4.57c0,.077,0,.154.006.231a4.123,4.123,0,0,0,1.344,7.994H14.394a3.661,3.661,0,0,0,.72-7.237Z"
+       transform="translate(389 52)"
+       stroke="#fff"
+       stroke-width="0.3"
+       style="stroke:#000000;stroke-opacity:1;fill:#ffffff;fill-opacity:1" />
+  </g>
+</svg>
