@@ -23,9 +23,9 @@ export default class CalendarItem extends Vue {
 
     let period = "AM";
     if (date.getHours() > 12) period = "PM";
-    let hours = (((date.getHours() + 11) % 12) + 1).toString();
+    let hours = (((date.getHours() + 11) % 12) + 1);
 
-    return hours + ":" + date.getMinutes() + " " + period;
+    return (hours < 10 ? '0' : '') + hours + ":" + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes() + " " + period;
   }
 
   public getImgUrl(picture: string) {

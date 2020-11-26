@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --port 3000",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "rm -rf ./dist/ && vue-cli-service build --mode production && scp -r -P 50 ./dist/* sandro@reazer.net:/var/www/smart-mirror/gui"
   },
   "dependencies": {
     "@types/node": "^14.14.9",

@@ -1,6 +1,6 @@
 <template>
   <div class="quote">
-    <p class="content">{{ quote }}</p>
+    <p class="content">"{{ quote }}"</p>
     <p class="author">- {{ author }}</p>
   </div>
 </template>

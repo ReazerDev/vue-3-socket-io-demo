@@ -47,6 +47,7 @@ export default class Weather extends Vue {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 5px;
 
     p {
       font-size: 30px;
@@ -54,6 +55,7 @@ export default class Weather extends Vue {
 
     .weather-icon {
       height: 120px;
+      padding-bottom: 10px;
     }
   }
 }
