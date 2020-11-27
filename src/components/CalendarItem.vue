@@ -40,7 +40,7 @@ export default class CalendarItem extends Vue {
   display: flex;
   align-items: center;
   font-size: 25px;
-  padding: 15px 0 15px 20px;
+  padding: 15px 0 15px 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 
   .infos {

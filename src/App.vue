@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper" v-bind:style="{ opacity: opacity }">
+  <div class="app-wrapper" :style="{ opacity: opacity }">
     <div class="time-wrapper">
       <Time />
     </div>

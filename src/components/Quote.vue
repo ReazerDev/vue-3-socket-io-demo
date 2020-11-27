@@ -50,6 +50,8 @@ export default class Time extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .quote {
+    transition: 500ms all;
+
     .content {
         font-size: 40px;
     }
