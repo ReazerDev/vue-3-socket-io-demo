@@ -26,23 +26,23 @@ export default class Time extends Vue {
 
     public startTimeout() {
         const now = new Date();
-        var eta_ms = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 24, 0, 0, 0).getTime() - Date.now();
+        var etaMs = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 24, 0, 0, 0).getTime() - Date.now();
         
-        if (eta_ms < 0) {
-            eta_ms += 86400000;
+        if (etaMs < 0) {
+            etaMs += 86400000;
             this.getQuote();
         }
         setTimeout(() => {
             this.getQuote();
             this.startTimeout();
-        }, eta_ms);
+        }, etaMs);
     }
 
     public getQuote() {
-        fetch('http://api.quotable.io/random?tags=technology|business|famous-quotes|inspirational|science|success|wisdom&maxLength=50').then(res => res.json()).then(data => {
-            this.quote = data['content']
-            this.author = data['author'];
-		});
+      fetch('http://api.quotable.io/random?tags=technology|business|famous-quotes|inspirational|science|success|wisdom&maxLength=50').then(res => res.json()).then(data => {
+        this.quote = data['content']
+        this.author = data['author'];
+		  });
     }
 }
 </script>

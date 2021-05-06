@@ -21,16 +21,15 @@ export default class Calendar extends Vue {
     calendarEvents: CalendarEvent[] = [];
     
     created() {
-        this.getCalendarEvents();
-
-        setInterval(this.getCalendarEvents, 60000);
+      this.getCalendarEvents();
+      setInterval(this.getCalendarEvents, 60000);
     }
 
     public getCalendarEvents() {
-        fetch(process.env.VUE_APP_API_URL + '/calendar').then(res => res.json()).then(data => {
-            this.calendarEvents = [];
-            this.calendarEvents = CalendarEvent.collection(data)
-		});
+      fetch(process.env.VUE_APP_API_URL + '/calendar').then(res => res.json()).then(data => {
+        this.calendarEvents = [];
+        this.calendarEvents = CalendarEvent.collection(data)
+		  });
     }
 }
 </script>

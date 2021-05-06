@@ -1,11 +1,25 @@
 <template>
   <div class="app-wrapper" :style="{ opacity: opacity }">
-    <youtube-iframe :style="{ opacity: playerOpacity }" id="player" playerWidth="100%" playerHeight="100%" @ready="onPlayerReady($event)" @ended="onPlayerEnded()" @playing="onPlayerPlaying()"></youtube-iframe>
-    <div class="time-wrapper">
-      <Time />
-    </div>
-    <div class="weather-wrapper">
-      <Weather />
+    <youtube-iframe
+      :style="{ opacity: playerOpacity }"
+      id="player"
+      playerWidth="100%"
+      playerHeight="100%"
+      @ready="onPlayerReady($event)"
+      @ended="onPlayerEnded()"
+      @playing="onPlayerPlaying()"
+      v-if="false"
+    ></youtube-iframe>
+    <div class="top">
+      <div class="time-wrapper">
+        <Time />
+      </div>
+      <div class="corona-wrapper">
+        <Corona />
+      </div>
+      <div class="weather-wrapper">
+        <Weather />
+      </div>
     </div>
     <div class="calendar-wrapper">
       <Calendar />
@@ -23,6 +37,7 @@ import Weather from "./components/Weather.vue";
 import Time from "./components/Time.vue";
 import Quote from "./components/Quote.vue";
 import Calendar from "./components/Calendar.vue";
+import Corona from "./components/Corona.vue";
 
 declare var YT: any;
 
@@ -32,6 +47,7 @@ declare var YT: any;
     Time,
     Quote,
     Calendar,
+    Corona,
   },
 })
 export default class App extends Vue {
@@ -103,7 +119,7 @@ export default class App extends Vue {
     width: inherit;
     transition: 500ms all;
 
-    > div:not(#player) {
+    > div:not(#player, .top) {
       display: flex;
       flex-basis: calc(50% - 60px);
       flex-direction: column;
@@ -114,6 +130,17 @@ export default class App extends Vue {
       width: 100%;
       height: 100%;
       overflow: hidden;
+    }
+
+    .top {
+      flex-basis: 100%;
+      flex-direction: row;
+
+      > div:not(#player, .top) {
+        display: flex;
+        flex-basis: calc(50% - 60px);
+        flex-direction: column;
+      }
     }
   }
 
@@ -129,6 +156,11 @@ export default class App extends Vue {
   .calendar-wrapper {
     align-items: flex-start;
     justify-content: center;
+  }
+
+  .corona-wrapper {
+    padding-top: 40px;
+    align-items: flex-end;
   }
 
   .quote-wrapper {
