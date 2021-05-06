@@ -8,7 +8,6 @@
       @ready="onPlayerReady($event)"
       @ended="onPlayerEnded()"
       @playing="onPlayerPlaying()"
-      v-if="false"
     ></youtube-iframe>
     <div class="top">
       <div class="time-wrapper">
