@@ -1,0 +1,1 @@
+declare module '@techassi/vue-youtube-iframe';

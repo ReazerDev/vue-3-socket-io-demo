@@ -1,5 +1,6 @@
 <template>
   <div class="app-wrapper" :style="{ opacity: opacity }">
+    <youtube-iframe :style="{ opacity: playerOpacity }" id="player" playerWidth="100%" playerHeight="100%" @ready="onPlayerReady($event)" @ended="onPlayerEnded()" @playing="onPlayerPlaying()"></youtube-iframe>
     <div class="time-wrapper">
       <Time />
     </div>
@@ -23,6 +24,8 @@ import Time from "./components/Time.vue";
 import Quote from "./components/Quote.vue";
 import Calendar from "./components/Calendar.vue";
 
+declare var YT: any;
+
 @Options({
   components: {
     Weather,
@@ -33,9 +36,48 @@ import Calendar from "./components/Calendar.vue";
 })
 export default class App extends Vue {
   opacity = 1;
+  playerOpacity = 0;
+  player: any;
+
+  onPlayerReady(event: any) {
+    this.player = event.target;
+  }
+
+  onPlayerEnded() {
+    this.playerOpacity = 0;
+  }
+
+  onPlayerPlaying() {
+    this.playerOpacity = 1;
+  }
+
   @Socket()
   toggleApp(data: any) {
-    this.opacity = this.opacity == 0 ? 1: 0;
+    this.opacity = this.opacity == 0 ? 1 : 0;
+    this.player.pauseVideo();
+  }
+
+  @Socket()
+  startVideo(data: any) {
+    this.player.loadVideoById(data);
+    this.player.playVideo();
+  }
+
+  @Socket()
+  continueVideo(data: any) {
+    this.player.playVideo();
+    this.playerOpacity = 1;
+  }
+
+  @Socket()
+  pauseVideo(data: any) {
+    this.player.pauseVideo();
+    this.playerOpacity = 0;
+  }
+
+  @Socket()
+  videoVolume(data: any) {
+    this.player.setVolume(data);
   }
 }
 </script>
@@ -61,10 +103,17 @@ export default class App extends Vue {
     width: inherit;
     transition: 500ms all;
 
-    > div {
+    > div:not(#player) {
       display: flex;
       flex-basis: calc(50% - 60px);
       flex-direction: column;
+    }
+
+    #player {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
   }
 

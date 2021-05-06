@@ -8,6 +8,7 @@
     "deploy": "rm -rf ./dist/ && vue-cli-service build --mode production && scp -r -P 50 ./dist/* sandro@reazer.net:/var/www/smart-mirror/gui"
   },
   "dependencies": {
+    "@techassi/vue-youtube-iframe": "^1.0.3",
     "@types/node": "^14.14.9",
     "@types/vue": "^2.0.0",
     "core-js": "^3.6.5",
