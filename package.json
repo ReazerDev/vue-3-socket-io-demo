@@ -17,7 +17,7 @@
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-property-decorator": "^9.1.2",
-    "vue-socket.io-extended": "file:~/projects/vue-socket.io-extended/"
+    "vue-socket.io-extended": "^5.0.0-alpha.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

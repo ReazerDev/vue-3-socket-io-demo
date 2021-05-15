@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import { Socket } from "vue-socket.io-extended";
+import Socket from 'vue-socket.io-extended/decorator';
 import Weather from "./components/Weather.vue";
 import Time from "./components/Time.vue";
 import Quote from "./components/Quote.vue";

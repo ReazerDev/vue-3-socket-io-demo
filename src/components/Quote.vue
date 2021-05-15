@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Vue } from 'vue-class-component';
-import { Socket } from 'vue-socket.io-extended';
+import Socket from 'vue-socket.io-extended/decorator';
 
 export default class Time extends Vue {
     quote = '';
